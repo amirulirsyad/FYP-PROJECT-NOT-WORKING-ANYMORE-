@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Getting Started SitumSDK</string>
+    <string name="search_key_hint">Key name...</string>
+    <string name="search_value_hint">Value name...</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="dont_show">Do not show again</string>
+    <string name="user_inside_event">You are inside an event</string>
+    <string name="no_events_in_building">There are not events in the building. You can create them in the Dashboard</string>
+    <string name="retry">Retry</string>
+    <string name="tv_select_points">Select two points in the map</string>
+
+    <plurals name="success_result">
+        <item quantity="one">%s success: %d result</item>
+        <item quantity="other">%s success: %d results</item>
+    </plurals>
+</resources>

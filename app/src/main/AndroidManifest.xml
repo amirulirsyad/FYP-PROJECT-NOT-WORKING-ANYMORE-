@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.situm.gettingstarted">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".GettingStartedApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Wifi Indoor Positioning"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".WifiConnectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".samplelist.SamplesActivity"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".samplelist.SamplesActivity"-->
+<!--            android:exported="true"-->
+<!--            android:launchMode="singleTask"-->
+<!--            android:screenOrientation="portrait">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".common.selectbuilding.SelectBuildingActivity"
+            android:exported="true"
+            android:label="Select a building"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".positioning.PositioningActivity"
+            android:label="Indoor positioning"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".drawbuilding.DrawBuildingActivity"
+            android:label="Draw building"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".indooroutdoor.IndoorOutdoorActivity"
+            android:label="Indoor-outdoor positioning"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".drawposition.DrawPositionActivity"
+            android:label="Draw position"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".drawpois.DrawPoisActivity"
+            android:label="Draw POIs"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".drawroute.DrawRouteActivity"
+            android:label="Draw route"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".realtime.RealTimeActivity"
+            android:label="Draw realtime"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".poifiltering.ListBuildingsActivity"
+            android:label="Select your building"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".poifiltering.FilteringActivity"
+            android:label="Key-Value POI Filtering"
+            android:parentActivityName=".poifiltering.ListBuildingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".drawroutegeojson.DrawRouteGeojsonActivity"
+            android:label="Draw route as GeoJson"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".guideinstructions.GuideInstructionsActivity"
+            android:label="Instructions while going to a POI"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".updatelocationparams.UpdateLocationParamsActivity"
+            android:label="Update location params on the fly"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".animateposition.SelectBuildingActivity"
+            android:label="Select your building"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".animateposition.AnimatePositionActivity"
+            android:label="Animate the position while walking"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pointinsidegeofence.PointInsideGeofenceActivity"
+            android:label="Point inside a geofence"
+            android:parentActivityName=".common.selectbuilding.SelectBuildingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fetchresources.FetchResourcesActivity"
+            android:label="Fetch Resources"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usewayfinding.WayfindingActivity"
+            android:label="Wayfinding"
+            android:parentActivityName=".samplelist.SamplesActivity"
+            android:screenOrientation="portrait" /> <!-- Google play services version -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- Situm SDK credentials -->
+        <meta-data
+            android:name="es.situm.sdk.API_USER"
+            android:value="amirulirsyad01@gmail.com" />
+        <meta-data
+            android:name="es.situm.sdk.API_KEY"
+            android:value="20020e1180d3f10bb0e844532c7f8e854923d5a7e0587da92be0fc5548abf380" /> <!-- GMaps api key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCI3YJo4h-c6k8HuVJ5rXK1Chvd9veAZ8Y555" />
+    </application>
+
+</manifest>
